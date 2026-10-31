@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoadWatch - Road Damage Reporting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#">🛣️ RoadWatch</a>
+  <nav><a href="#home">Home</a><a href="#report">Report Damage</a><a href="#reports">Reports</a></nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <p class="tagline">SAFER ROADS START WITH US</p>
+    <h1>See a pothole?<br><span>Report it here.</span></h1>
+    <p class="intro">Help make roads safer by reporting potholes, cracks and other damaged road conditions in your area.</p>
+    <a class="button" href="#report">Report Road Damage +</a>
+  </div>
+  <div class="hero-art"><div>⚠️</div><strong>ROAD SAFETY<br>MATTERS</strong></div>
+</section>
+
+<section class="stats">
+  <div class="stat"><p>Total Reports</p><h2 id="totalReports">0</h2></div>
+  <div class="stat"><p>Pending Reports</p><h2 id="pendingReports">0</h2></div>
+  <div class="stat"><p>Resolved Reports</p><h2 id="resolvedReports">0</h2></div>
+</section>
+
+<main class="content">
+  <section class="panel" id="report">
+    <h2>📍 Report Road Damage</h2>
+    <p class="muted">Enter the details of the damaged road below.</p>
+    <form id="reportForm">
+      <label for="location">Road location *</label>
+      <input id="location" type="text" placeholder="Near College Gate, Main Road" required>
+
+      <label for="damageType">Type of damage *</label>
+      <select id="damageType" required>
+        <option value="">Select damage type</option>
+        <option>Pothole</option><option>Cracked Road</option>
+        <option>Waterlogging</option><option>Broken Road Edge</option>
+        <option>Open Manhole</option><option>Other</option>
+      </select>
+
+      <label for="severity">Damage severity *</label>
+      <select id="severity" required>
+        <option value="">Select severity</option>
+        <option>Low</option><option>Medium</option><option>High</option>
+      </select>
+
+      <label for="description">Description *</label>
+      <textarea id="description" rows="4" placeholder="Explain what is damaged..." required></textarea>
+
+      <label for="photo">Add a photo (optional)</label>
+      <input id="photo" type="file" accept="image/*">
+      <p class="small">Demo limit: choose an image smaller than 500 KB.</p>
+      <button class="button submit" type="submit">Submit Report</button>
+      <p id="message" role="status"></p>
+    </form>
+  </section>
+
+  <section class="panel" id="reports">
+    <h2>📋 Recent Reports</h2>
+    <p class="muted">Search reports and check their demo status.</p>
+    <input id="searchBox" type="search" placeholder="Search by location, type or ID...">
+    <select id="statusFilter" aria-label="Filter reports">
+      <option value="All">All statuses</option><option>Pending</option>
+      <option>In Progress</option><option>Resolved</option>
+    </select>
+    <div id="reportList"></div>
+    <p id="noReports" class="empty">No reports yet. Submit your first report!</p>
+  </section>
+</main>
+
+<section class="how">
+  <h2>How RoadWatch Works</h2>
+  <div class="how-grid">
+    <article><span>📷</span><h3>1. Find damage</h3><p>Notice a pothole or unsafe road condition.</p></article>
+    <article><span>📝</span><h3>2. Submit a report</h3><p>Enter the location and describe the problem.</p></article>
+    <article><span>🛠️</span><h3>3. Track status</h3><p>See the demo status of your submitted report.</p></article>
+  </div>
+</section>
+
+<footer><h3>🛣️ RoadWatch</h3><p>A student project for reporting road damage.</p>
+<p class="small">Demo only: reports are not sent to government authorities.</p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* RoadWatch design - CSS controls the look of the website */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, sans-serif; color: #20332d; background: #f4f7f1; }
+
+.header { background: white; padding: 18px 7%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e9df; }
+.logo { color: #214c3d; font-size: 23px; font-weight: bold; text-decoration: none; }
+nav a { color: #42564c; text-decoration: none; margin-left: 22px; font-weight: bold; }
+nav a:hover { color: #659b37; }
+
+.hero { background: #e8f1df; padding: 60px 7%; display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+.tagline { color: #5c8c35; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+h1 { font-size: 48px; line-height: 1.1; margin: 15px 0; }
+h1 span { color: #5b8e32; }
+.intro { color: #5d6d63; max-width: 520px; line-height: 1.7; margin-bottom: 25px; }
+.button { display: inline-block; background: #214c3d; color: white; border: 0; border-radius: 8px; padding: 14px 20px; text-decoration: none; font-size: 15px; font-weight: bold; cursor: pointer; }
+.button:hover { background: #326b50; }
+.hero-art { background: linear-gradient(145deg,#c6dfb4,#91b887); width: 38%; min-width: 280px; height: 250px; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #214c3d; font-size: 22px; text-align: center; line-height: 1.5; }
+.hero-art div { font-size: 65px; }
+
+.stats { padding: 25px 7% 5px; display: flex; gap: 18px; }
+.stat { background: white; border: 1px solid #e1e9df; border-radius: 12px; padding: 18px; flex: 1; }
+.stat p { color: #68796f; margin: 0 0 8px; }
+.stat h2 { font-size: 30px; margin: 0; color: #214c3d; }
+
+.content { padding: 25px 7% 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+.panel { background: white; border: 1px solid #e1e9df; border-radius: 14px; padding: 25px; }
+.panel h2 { margin-top: 0; font-size: 22px; }
+.muted { color: #718077; font-size: 14px; line-height: 1.5; }
+label { display: block; font-weight: bold; font-size: 14px; margin: 17px 0 7px; }
+input, select, textarea { width: 100%; padding: 12px; border: 1px solid #d8e2d6; border-radius: 7px; background: #fbfcfa; font-size: 14px; font-family: Arial,sans-serif; margin-bottom: 8px; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #b8d69f; border-color: #659b37; }
+textarea { resize: vertical; }
+.small { color: #7b887f; font-size: 12px; line-height: 1.5; }
+.submit { width: 100%; margin-top: 12px; }
+#message { font-size: 14px; margin-bottom: 0; }
+.success { color: #397c32; }
+.error { color: #b23c32; }
+
+.report-card { border: 1px solid #e1e9df; border-radius: 10px; padding: 15px; margin-top: 14px; background: white; }
+.report-card h3 { margin: 8px 0; font-size: 17px; }
+.report-card p { color: #66766c; font-size: 13px; line-height: 1.5; }
+.report-meta { color: #7b887f; font-size: 12px; }
+.status { display: inline-block; padding: 6px 9px; border-radius: 20px; background: #fff2d6; color: #8b681b; font-size: 12px; font-weight: bold; }
+.status.progress { background: #e5efff; color: #315f9c; }
+.status.resolved { background: #e5f4dc; color: #42732c; }
+.report-card img { width: 100%; max-height: 180px; object-fit: cover; border-radius: 8px; margin-top: 10px; }
+.actions { display: flex; gap: 8px; margin-top: 12px; align-items: center; }
+.actions select { flex: 1; margin: 0; }
+.delete { background: #fff0ed; color: #a23f32; border: 0; border-radius: 6px; padding: 10px; cursor: pointer; }
+.empty { color: #7b887f; text-align: center; padding: 25px 10px; }
+
+.how { background: #e8f1df; padding: 45px 7%; text-align: center; }
+.how-grid { display: flex; gap: 18px; margin-top: 25px; }
+.how-grid article { background: white; padding: 25px; border-radius: 12px; flex: 1; }
+.how-grid span { font-size: 35px; }
+.how-grid p { color: #68796f; font-size: 14px; line-height: 1.5; }
+footer { background: #214c3d; color: white; padding: 28px 7%; text-align: center; }
+footer h3 { margin-top: 0; }
+
+@media (max-width: 750px) {
+  .header { flex-direction: column; gap: 15px; }
+  nav a { margin: 0 8px; font-size: 13px; }
+  .hero { flex-direction: column; align-items: flex-start; padding: 40px 6%; }
+  h1 { font-size: 38px; }
+  .hero-art { width: 100%; min-width: 0; }
+  .stats { padding-left: 6%; padding-right: 6%; flex-direction: column; }
+  .content { padding-left: 6%; padding-right: 6%; grid-template-columns: 1fr; }
+  .how-grid { flex-direction: column; }
+}
